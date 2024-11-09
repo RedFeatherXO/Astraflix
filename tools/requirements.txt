@@ -1,3 +1,7 @@
 docopt
 matplotlib
 mcap
+pyqtgraph
+PyQt5
+PySide6
+pyserial
