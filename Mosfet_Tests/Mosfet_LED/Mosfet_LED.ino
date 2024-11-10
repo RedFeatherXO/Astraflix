@@ -1,8 +1,8 @@
-int pwmPin1 = 9;  // PWM-fähiger Ausgangspin
-int pwmPin2 = 6;  // PWM-fähiger Ausgangspin
-int pwmPin3 = 5;  // PWM-fähiger Ausgangspin
-int pwmPin4 = 3;  // PWM-fähiger Ausgangspin
-int pwmValue = 255; // Variable für den PWM-Wert
+int pwmPin1 = 9;  // PWM-fähiger Ausgangspin //ESP32 Supermini -> A0
+int pwmPin2 = 6;  // PWM-fähiger Ausgangspin //ESP32 Supermini -> A1
+int pwmPin3 = 5;  // PWM-fähiger Ausgangspin //ESP32 Supermini -> A2
+int pwmPin4 = 3;  // PWM-fähiger Ausgangspin //ESP32 Supermini -> A3
+int pwmValue = 255; // Variable für den PWM-Wert //ESP32 Supermini -> A4
 
 void setup() {
   Serial.begin(9600);   // Serielle Kommunikation starten
@@ -22,6 +22,8 @@ void loop() {
   analogWrite(pwmPin2, pwmValue * 0.075);   // 75% des Eingabewerts
   analogWrite(pwmPin3, pwmValue * 0.05);    // 50% des Eingabewerts
   analogWrite(pwmPin4, pwmValue * 0.01);   // 25% des Eingabewerts
+}
+
   /*
   if (Serial.available() > 0) {
     int inputValue = Serial.parseInt();  // Eingabe lesen und in eine Zahl umwandeln
@@ -41,4 +43,3 @@ void loop() {
       Serial.println("Ungültiger Wert! Bitte gib eine Zahl zwischen 0 und 255 ein.");
     }
   }*/
-}
